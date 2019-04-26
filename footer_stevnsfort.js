@@ -7,9 +7,7 @@ document.addEventListener("DOMContentLoaded", start);
 function start() {
     async function getJson() {
 
-        //!!!!Opdater hjemmesiden så den passer!!!!
-
-        let url = "http://ohnonotanotherwebsite.com/kea/07-cms/kalklandet_redesign/wordpress/wp-json/wp/v2/museums_information/210";
+        let url = "http://ohnonotanotherwebsite.com/kea/07-cms/kalklandet_redesign/wordpress/wp-json/wp/v2/museums_information/234";
         let jsonData = await fetch(url);
         data = await jsonData.json();
         showData();

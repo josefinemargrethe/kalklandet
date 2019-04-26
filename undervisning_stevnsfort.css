@@ -1,0 +1,613 @@
+@font-face {
+    font-family: 'limestonebold';
+    src: url('fonte/limestone_bold-webfont.woff2') format('woff2'),
+        url('fonte/limestone_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'limestoneheavy';
+    src: url('fonte/limestone_heavy-webfont.woff2') format('woff2'),
+        url('fonte/limestone_heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'limestonelight';
+    src: url('fonte/limestone_light-webfont.woff2') format('woff2'),
+        url('fonte/limestone_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'limestoneregular';
+    src: url('fonte/limestone_regular-webfont.woff2') format('woff2'),
+        url('fonte/limestone_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#desktoptabs {
+    display: none;
+}
+
+/*Kommentar 1: Fjern background color på "*" */
+
+
+* {
+    margin: 0;
+    font-family: Helvetica Neue;
+}
+
+h1 {
+    font-family: 'limestoneregular';
+}
+
+/*Kommentar 2: Ændre burgermenuen til en passende menu */
+
+#mobile_nav {
+    position: absolute;
+    background-image: url(svg/burger_menu_stevnsfort.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    left: 85vw;
+    top: 5vh;
+    z-index: 5;
+
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.overlay a {
+    margin-bottom: 10vh;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+#landingpage {
+    background-image: url(svg/logo_main.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 150px;
+    margin: auto;
+    margin-bottom: 5vh;
+
+
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #818181;
+
+}
+
+/*Kommentar 3: Ændre luk knappen til en passende knap */
+
+
+.closebtn {
+    background-image: url(svg/close_btn_stevnsfort.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 85vw;
+    top: 5vh;
+
+}
+
+.overlay .closebtn {}
+
+#desktop_nav {
+    display: none;
+}
+
+
+
+
+
+@media only screen and (min-width: 600px) {
+
+    #mobile_nav {
+        display: none;
+
+    }
+
+    #desktop_nav {
+        display: block;
+        position: absolute;
+        right: 7vw;
+        top: 50px;
+        z-index: 1;
+
+
+
+    }
+
+    #desktop_nav a {
+        margin-left: 5vw;
+        text-decoration: none;
+        color: #377288;
+    }
+
+    #logobox {
+        position: relative;
+        width: 50vw;
+        height: 100px;
+        overflow: hidden;
+        z-index: 1;
+
+
+    }
+
+    /*Kommentar 4: Ændre loget til en passende logo */
+
+
+    #logo_main {
+        background-image: url(svg/logo_main_stevnsfort.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 150px;
+        position: absolute;
+        left: 25px;
+        top: 3vh;
+    }
+
+    /*Kommentar 5: Ændre loget til en passende logo */
+
+
+    #logo_sub {
+        background-image: url(svg/logo_sub_stevnsfort.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 73.6px;
+        position: absolute;
+        left: 175px;
+        top: 3.07vh;
+    }
+
+
+}
+
+/*MENU Effects*/
+
+
+
+.hide {
+    display: none;
+
+}
+
+
+
+
+/*bodien starter her*/
+
+
+body,
+html {
+    height: 100%;
+}
+
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+
+
+#edu_box {
+    padding: 5vw 5vw 0 5vw;
+    overflow: auto;
+}
+
+#edu_title {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #377288;
+}
+
+#edu_map {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 50px;
+
+}
+
+
+#edu_map h1 {
+    color: #377288;
+    padding-bottom: 50px;
+}
+
+
+#edu_map img {
+
+    width: 80vw;
+}
+
+#accon_title {
+    text-align: center;
+    background-color: #377288;
+    color: white;
+    padding: 20px;
+
+
+}
+
+
+.acccon {
+    overflow: hidden;
+    padding-bottom: ;
+}
+
+.accordion {
+    cursor: pointer;
+    width: 100%;
+
+    /*    position: absolute;*/
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    justify-items: center;
+    border: 0;
+
+}
+
+
+button {
+
+    display: grid;
+    padding: 20px;
+    color: white;
+    font-size: 1rem;
+
+
+}
+
+button:focus {
+    outline: 0;
+}
+
+
+
+
+/* Styling på accordion panel. */
+.panel {
+
+    display: none;
+    overflow: hidden;
+    padding: 50px;
+    line-height: 30px;
+    color: white;
+
+}
+
+
+.panel a {
+    color: white;
+}
+
+
+
+
+
+/*farvekoder til menuerne*/
+
+
+
+#footer {
+    position: relative;
+    background: #377288;
+    color: white;
+    text-align: left;
+
+
+}
+
+#footer #textbox {
+    padding-top: 30px;
+    line-height: 30px;
+    width: 100%;
+    margin: auto;
+
+}
+
+
+#footer #socialbox {
+    padding-bottom: 30px;
+}
+
+#socialbox img {
+    height: 30px;
+    margin: 20px
+}
+
+#socialbox {
+    width: 100%;
+}
+
+#footer {
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    display: flex;
+
+
+}
+
+@media only screen and (min-width: 800px) {
+
+    #edu_box {
+        width: 70%;
+        margin: auto;
+    }
+
+
+
+
+
+
+
+    #footer p {
+        text-align: left;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 600px) {
+
+    #mobiltabs {
+        display: none;
+    }
+
+    #desktoptabs {
+        display: block;
+    }
+
+
+    #edu_map img {
+        width: 30vw;
+
+    }
+
+    button {
+        padding: 40px;
+    }
+
+    #footer {
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        display: flex;
+
+
+    }
+
+
+    #footer {
+        text-align: left;
+
+    }
+
+    #edu_title {
+        padding-top: 0;
+    }
+
+
+
+
+    #footer #textbox {
+        padding-top: 25px;
+        line-height: 20px;
+        width: auto;
+        margin: 0;
+
+    }
+
+
+    #footer #socialbox {
+        padding: 20px;
+    }
+
+    #socialbox img {
+        height: 30px;
+        margin: 20px;
+    }
+
+    #socialbox {
+        width: auto;
+
+    }
+
+
+    /*////////////////////////////////////////////////////////////////////////////////TRANSPORT_TAB/////////////////////////////////*/
+
+    /* Style the tab */
+
+
+
+    #tab_size {
+        width: 70%;
+        margin: auto;
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    .tab {
+
+        overflow: hidden;
+        border: 0;
+        background-color: #377288;
+
+
+    }
+
+    /* Style the buttons inside the tab */
+
+    #button_position {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-around;
+        margin: 0px 50px;
+    }
+
+    #button_position button {
+        font-family: 'limestoneregular';
+    }
+
+    .tab button {
+
+
+        border-radius: 10px;
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        margin: 10px;
+        transition: 0.3s;
+        font-size: 17px;
+        color: white;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        ;
+
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: rgba(255, 255, 255, 0.26);
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: rgba(255, 255, 255, 0.56);
+    }
+
+
+    /* Style the close button */
+    .topright {
+        float: right;
+        cursor: pointer;
+        font-size: 28px;
+    }
+
+    .topright:hover {
+        color: red;
+    }
+
+    /*////////////////////////////////////////////////////////////////////////////////TRANSPORT_TAB/////////////////////////////////*/
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 50px 80px;
+        border: 0;
+        border-top: none;
+        background-color: #d5dce2;
+        color: #19A6A2;
+        line-height: 30px;
+        font-size: 1.2rem;
+    }
+
+
+    /*////////////////////////////////////////////////////////////////////////////////PRICE_TAB/////////////////////////////////*/
+
+
+    .tabcontent2 {
+        display: none;
+        padding: 50px 40px;
+        border: 0;
+        border-top: none;
+        background-color: #d5dce2;
+        color: #377288;
+        line-height: 30px;
+        font-size: 1.2rem;
+    }
+
+
+
+    /*////////////////////////////////////////////////////////////////////////////////GUIDE_TAB/////////////////////////////////*/
+
+
+    .tabcontent3 {
+        display: none;
+        padding: 50px 40px;
+        border: 0;
+        border-top: none;
+        background-color: #d5dce2;
+        color: #19a6a2;
+        line-height: 30px;
+        font-size: 1.2rem;
+    }
+
+
+}
+
+
+
+.farve1 {
+    background-color: rgba(55, 114, 136, 0.85);
+}
+
+.farve2 {
+    background-color: rgba(55, 114, 136, 0.75)
+}
+
+.farve3 {
+    background-color: rgba(55, 114, 136, 0.65);
+}
+
+.farve4 {
+    background-color: rgba(55, 114, 136, 0.55)
+}

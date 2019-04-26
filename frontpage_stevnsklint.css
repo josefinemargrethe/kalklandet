@@ -1,0 +1,797 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////General////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica Neue;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    animation: black_in 2s;
+    animation-delay: 2s;
+
+
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    position: relative;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////FX////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(5vh)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////HEADER////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+#mobile_nav {
+    background-image: url(burger_menu/burger_menu.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    left: 85vw;
+    top: 5vh;
+    z-index: 1;
+
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+
+}
+
+.overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.overlay a {
+    margin-bottom: 10vh;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+#landingpage {
+    background-image: url(burger_menu/logo_main.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 150px;
+    margin: auto;
+    margin-bottom: 5vh;
+
+
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #818181;
+
+}
+
+
+.closebtn {
+    background-image: url(burger_menu/close_btn.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 85vw;
+    top: 5vh;
+
+}
+
+.overlay .closebtn {}
+
+#desktop_nav {
+    display: none;
+}
+
+
+
+
+
+@media only screen and (min-width: 600px) {
+
+    header {
+        position: relative;
+    }
+
+    #mobile_nav {
+        display: none;
+
+    }
+
+    #desktop_nav {
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 5vw;
+        z-index: 1;
+
+
+
+    }
+
+    #desktop_nav a {
+        margin-left: 5vw;
+        text-decoration: none;
+        color: white;
+    }
+
+    #logobox {
+        position: absolute;
+        width: 48vw;
+        height: 100px;
+        overflow: hidden;
+        z-index: 1;
+
+
+    }
+
+
+    #logo_main {
+        background-image: url(burger_menu/logo_main.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 150px;
+        position: absolute;
+        left: 25px;
+        top: 3vh;
+    }
+
+    #logo_sub {
+        background-image: url(burger_menu/stevnsklint-logo.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 70px;
+        position: absolute;
+        left: 180px;
+        top: 3vh;
+    }
+
+
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////MENU_EFFECTS//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+.hide {
+    display: none;
+
+}
+
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////SECTION_1_Mobil//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+#section1m {
+
+    position: relative;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    z-index: 0;
+
+
+    width: 100%;
+    height: 100vh;
+}
+
+#section1m h1 {
+    font-size: 12vw;
+    text-align: center;
+    padding-top: 40vh;
+    color: white;
+    animation: fade-in 2s both;
+    animation-delay: 1s;
+
+
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////SECTION_2_Mobil//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#section2m {
+
+    position: static;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+
+
+    width: 100%;
+    height: 100vh;
+}
+
+#section2m h2 {
+    font-size: 1.8rem;
+    padding-top: 65%;
+    text-align: center;
+    color: white;
+
+}
+
+
+#section2m p {
+    font-size: 1.5rem;
+    line-height: 50px;
+    margin: 20px;
+    text-align: center;
+    color: white;
+
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////SECTION_3_Mobil//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+#section3m {
+    position: relative;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+
+    width: 100%;
+    height: 100vh;
+}
+
+#section3m h2 {
+    font-size: 1.8rem;
+    padding: 10px;
+    text-align: center;
+    padding-top: 65%;
+    color: white;
+
+}
+
+
+#section3m p {
+    font-size: 1.5rem;
+    line-height: 50px;
+    margin: 20px;
+    text-align: center;
+    color: white;
+
+}
+
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////SECTION_4_Mobil//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+#section4m {
+
+    position: relative;
+
+
+
+}
+
+#section4m h1 {
+    position: relative;
+    color: #007EA6;
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+
+
+
+#desktop_sections {
+    display: none;
+}
+
+
+#map {
+    margin: 50px;
+}
+
+#transport {
+    background-color: rgba(55, 114, 136, 0.16);
+    height: 130px;
+}
+
+#transport h2 {
+    color: #007EA6;
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 50px;
+
+}
+
+
+#openings {
+    background-color: rgba(55, 114, 136, 0.25);
+    height: 150px;
+}
+
+#openings h2 {
+    color: #007EA6;
+    text-align: center;
+    padding-top: 50px;
+
+}
+
+
+#openings h3 {
+    color: #007EA6;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+#pricelist {
+    background-color: rgba(55, 114, 136, 0.42);
+
+}
+
+
+#pricelist h1 {
+    color: #007EA6;
+    text-align: center;
+    padding-top: 50px;
+    margin-top: 0;
+
+}
+
+
+
+#pricelist {
+    color: #007EA6;
+
+}
+
+.pricelist {
+
+    text-align: center;
+    margin-top: 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#buttons {
+    padding-top: 35px;
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+
+}
+
+#grupper_btn {
+    color: white;
+    background-color: #007EA6;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+
+#guide_btn {
+    color: white;
+    background-color: #007EA6;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////MEDIA_QUERY_SECTION//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*media query for iphone se*/
+
+@media only screen and (max-width: 350px) {
+
+    #section2m h2 {
+        padding-top: 50%;
+    }
+
+    #section3m h2 {
+        padding-top: 50%;
+    }
+
+
+}
+
+/*DESKTOP Query*/
+
+
+@media only screen and (min-width: 900px) {
+
+
+
+    #mobile_sections {
+        display: none;
+    }
+
+    #desktop_sections {
+        display: block;
+    }
+
+    #mobile_footer {
+        display: none;
+    }
+
+
+
+    /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////SECTION_1_DESKTOP//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+    #section1d {
+
+        position: relative;
+
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 0;
+        z-index: 0;
+
+
+        width: 100%;
+        height: 100vh;
+    }
+
+
+    #section1d h1 {
+        font-size: 5rem;
+        text-align: center;
+        padding-top: 40vh;
+        color: white;
+        animation: fade-in 2s both;
+        animation-delay: 1s;
+
+
+    }
+
+
+    /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////SECTION_2_DESKTOP//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+    #section2d {
+
+        position: relative;
+        background:
+            none;
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+        z-index: 0;
+
+
+        width: 100%;
+        height: 100vh;
+
+    }
+
+    #section2d_textbox {
+        background-color: rgba(55, 114, 136, 0.18);
+        position: absolute;
+        top: 20vh;
+        width: 100vw;
+        padding-top: 10px;
+        padding-bottom: 50px;
+
+    }
+
+    #section2d h2 {
+        font-size: 2rem;
+        margin-left: 50px;
+        margin-bottom: 10px;
+        color: white;
+        width: 38vw;
+        color: #007EA6;
+
+
+
+    }
+
+
+    #section2d p {
+        font-size: 1.1rem;
+        line-height: 50px;
+        margin-left: 50px;
+
+        color: white;
+        width: 35vw;
+        color: #007EA6;
+
+    }
+
+
+
+
+    #section2d_img {
+        width: 45vw;
+        height: 45vw;
+        position: absolute;
+        top: 180px;
+        right: 60px;
+
+
+    }
+
+    #section2d_img img {}
+
+
+
+    #section4m {
+        display: none;
+    }
+
+
+
+
+
+    /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////SECTION_3_DESKTOP//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+    #section3d {
+
+        position: relative;
+        background:
+            #007EA6;
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+        z-index: 0;
+
+
+        width: 100%;
+        height: 100vh;
+
+    }
+
+    #section3d_textbox {
+        background-color: rgba(255, 255, 255, 0.18);
+        position: absolute;
+        top: 20vh;
+        padding-top: 10px;
+        padding-bottom: 50px;
+        width: 100%;
+        overflow: hidden;
+
+
+    }
+
+    #section3d h2 {
+        font-size: 2rem;
+        margin-left: 60vw;
+        margin-bottom: 10px;
+        color: white;
+        width: 38vw;
+        color: #ffffff;
+
+
+
+
+
+    }
+
+
+    #section3d p {
+        font-size: 1.2rem;
+        line-height: 50px;
+        margin-left: 60vw;
+
+        color: white;
+        width: 35vw;
+        color: #ffffff;
+
+
+    }
+
+
+
+
+    #section3d_img {
+        width: 48vw;
+        height: auto;
+        position: absolute;
+        top: 250px;
+        left: 60px;
+
+    }
+
+
+    /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////SECTION_4_DESKTOP//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+    #section4d {
+        flex-wrap: wrap;
+        display: flex;
+        height: 100vh;
+    }
+
+    #section4d #map_section {
+        width: 50vw;
+    }
+
+
+    #section4d h1 {
+        text-align: center;
+        color: #007EA6;
+        padding-top: 50px;
+
+    }
+
+
+    #desktop_map {
+
+        width: 400px;
+
+        margin: 50px auto;
+    }
+
+    #section4d #info_section {
+        width: 50vw;
+    }
+
+    #section4d #transport h2 {
+        margin: 0;
+    }
+
+    #section4d {
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    #section4d #pricelist {
+        position: relative;
+    }
+
+
+    #section4d #pricelist h1 {
+        text-align: center;
+        margin-left: 50px;
+        margin: 0;
+        padding-bottom: 20px;
+
+    }
+
+
+
+    #section4d #pricelist p {
+        text-align: left;
+        width: 50%;
+        margin-left: 10%;
+        font-size: 1.5rem;
+        padding-bottom: 40px;
+
+
+    }
+
+    #section4d #buttons {
+        width: 30%;
+        position: absolute;
+        top: 120px;
+        right: 10%;
+        padding: 0;
+        margin: 0;
+
+
+    }
+
+    #section4d #grupper_btn h2 {
+        font-size: 1rem
+    }
+
+    #section4d #guide_btn h2 {
+        font-size: 1rem
+    }
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////FOOTER_DESKTOP//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#desktop_footer {
+
+    background: #007EA6;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+#desktop_footer #textbox {
+    width: 30%;
+    color: white;
+    padding: 50px 0;
+    margin: auto;
+
+}
+
+#desktop_footer #socialbox {
+    width: 50%;
+
+    color: white;
+    padding: 50px 0;
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////FOOTER_MOBILE//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+#mobile_footer {
+    position: relative;
+    background: #007EA6;
+    color: white;
+    text-align: center;
+
+}
+
+#mobile_footer #textbox {
+    padding-top: 40px;
+    line-height: 30px;
+    width: 80%;
+    margin: auto;
+}
+
+
+#mobile_footer #socialbox {
+    padding-bottom: 40px;
+}
+
+#socialbox img {
+    height: 30px;
+    margin: 20px
+}

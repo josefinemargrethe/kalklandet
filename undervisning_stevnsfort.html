@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="undervisning_stevnsfort.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
+            <div class="overlay-content">
+                <a id="landingpage" href="index.html"></a>
+                <a href="front-page-stevnsfort.html">HJEM</a>
+                <a href="besog_stevnsfort.html">BESØG</a>
+                <a href="undervisning_stevnsfort.html">UNDERVISNING</a>
+                <a href="om_stevnsfort.html">OM</a>
+            </div>
+        </div>
+
+        <div id="logobox">
+            <a href="index.html">
+                <div id="logo_main">
+                </div>
+            </a>
+
+            <a href="front-page-stevnsfort.html">
+
+                <div id="logo_sub"></div>
+            </a>
+
+        </div>
+
+
+
+        <div id="desktop_nav">
+            <nav>
+                <a href="besog_stevnsfort.html">BESØG</a>
+                <a href="undervisning_stevnsfort.html">UNDERVISNING</a>
+                <a href="om_stevnsfort.html">OM</a>
+            </nav>
+        </div>
+
+        <span id="mobile_nav" style="font-size:30px;cursor:pointer" onclick="openNav()"></span>
+
+
+    </header>
+
+
+
+
+
+
+    <div id="edu_box">
+        <div id="edu_title">
+            <h1>Undervisning</h1>
+        </div>
+
+        <div id="mobiltabs">
+            <section id="guidet_ture">
+
+                <div id="accon_title">
+                    <h2>Vælg Klassetrin</h2>
+                </div>
+
+                <div class="acccon">
+
+
+                    <button class="accordion treklassetitel farve1">3-6. Klasse </button>
+
+                    <div class="panel treklasse farve1">
+                    </div>
+
+                    <button class="accordion syvklassetitel farve2">7-10. Klasse</button>
+
+                    <div class="panel syvklasse farve2">
+                    </div>
+
+
+                    <button class="accordion stxtitel farve3">STX og HF</button>
+
+                    <div class="panel stx farve3">
+                    </div>
+
+
+                    <button class="accordion andettitel farve4">Andet</button>
+
+                    <div class="panel andet farve4">
+                    </div>
+
+
+
+
+
+                </div>
+
+            </section>
+        </div>
+
+
+    </div>
+
+
+    <div id="desktoptabs">
+        <!--    !!!!undervisning-tab!!!!! -->
+        <div id="transport_tab">
+            <div id="tab_size">
+                <div class="tab">
+                    <div id="button_position">
+
+                        <button class="tablink2" onclick="openOptionPrices(event, 'Adults')" id="defaultOpen2">3-6. klasse</button>
+                        <button class="tablink2" onclick="openOptionPrices(event, 'Children')">7-10. klasse</button>
+                        <button class="tablink2" onclick="openOptionPrices(event, 'Students')">STX og HF</button><button class="tablink2" onclick="openOptionPrices(event, 'Retired')">Andet</button>
+                    </div>
+                </div>
+
+                <div id="Adults" class="tabcontent2">
+
+                    <div class="desktreklasse"></div>
+                </div>
+
+                <div id="Children" class="tabcontent2">
+
+                    <div class="desksyvklasse"></div>
+                </div>
+
+                <div id="Students" class="tabcontent2">
+
+                    <div class="deskstx"></div>
+                </div>
+
+                <div id="Retired" class="tabcontent2">
+
+                    <div class="deskandet"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="edu_map">
+        <h1>Besøg os i dag</h1>
+        <img src="img/map_stevnsfort.svg" alt="stevnsklint">
+    </div>
+
+
+
+
+
+    <footer>
+
+        <div id="footer">
+
+            <div id="textbox">
+                <p class="phone"></p>
+                <p class="phone_times"></p>
+
+            </div>
+
+            <div id="socialbox">
+
+                <a id="myAnchor" href="mailto:kalklandet@mail.dk">
+                    <img src="img/mail.svg" alt="mailicon">
+                </a>
+
+                <a id="facebookAnchor" href="https://www.facebook.com/stevnsklint/">
+                    <img src="img/facebook.svg" alt="facebookicon">
+                </a>
+
+                <a id="instagramAnchor" href="https://www.instagram.com/oestsjaellandsmuseum/">
+                    <img src="img/instagram.svg" alt="instaicon">
+                </a>
+            </div>
+
+        </div>
+
+    </footer>
+
+    </footer>
+
+
+
+
+
+
+    <script src="menu.js"></script>
+    <script src="undervisning_stevnsfort.js"></script>
+    <script src="footer_stevnsfort.js"></script>
+</body>
+
+</html>

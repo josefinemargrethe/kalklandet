@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Besøg Geomuseum Faxe</title>
+    <link rel="stylesheet" href="">
+
+    <style>
+        /*OVERORDNEDE REGLER */
+
+
+        * {
+
+            margin: 0;
+            font-family: Helvetica Neue;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+
+        a {
+
+            color: #126a68;
+        }
+
+        a:hover {
+            color: #4e6f6e;
+        }
+
+
+
+        #mobiltabs {
+            display: block;
+        }
+
+        #desktoptabs {
+            display: none;
+        }
+
+
+
+
+
+        @font-face {
+            font-family: 'limestonebold';
+            src: url('fonte/limestone_bold-webfont.woff2') format('woff2'),
+                url('fonte/limestone_bold-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+
+
+
+
+        @font-face {
+            font-family: 'limestoneheavy';
+            src: url('fonte/limestone_heavy-webfont.woff2') format('woff2'),
+                url('fonte/limestone_heavy-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+
+
+
+
+        @font-face {
+            font-family: 'limestonelight';
+            src: url('fonte/limestone_light-webfont.woff2') format('woff2'),
+                url('fonte/limestone_light-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+
+
+
+
+        @font-face {
+            font-family: 'limestoneregular';
+            src: url('fonte/limestone_regular-webfont.woff2') format('woff2'),
+                url('fonte/limestone_regular-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+
+
+
+
+        /*        FOR MOBIL*/
+
+
+        #abning,
+        #adresse {
+
+            margin: 7% 7%;
+
+        }
+
+        #adresse {
+            background-color: #ddedec;
+        }
+
+
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'limestoneregular';
+        }
+
+        h2 {
+            color: white;
+            background-color: #19a6a2;
+            padding: 5% 0;
+            font-size: 1.9rem;
+            /*            margin: 0 7%;*/
+        }
+
+        h1 {
+            font-size: 2.1rem;
+        }
+
+
+        #forar,
+        #efterar,
+        #sommer,
+        #saerlige {
+            margin: 5% 0;
+            background-color: #ddedec;
+        }
+
+        .forar,
+        .efterar,
+        .sommer,
+        .saerlige,
+        #abning p,
+        #adrdiv {
+            color: #126a68;
+            padding: 3% 0;
+            font-size: 1.6rem;
+        }
+
+
+        /*Kommentar 2: Ændre burgermenuen til en passende menu */
+
+        #mobile_nav {
+            background-image: url(img/burger_menu_faxe.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 30px;
+            width: 30px;
+            position: fixed;
+            left: 85vw;
+            top: 5vh;
+            z-index: 1;
+
+        }
+
+        .overlay {
+            height: 0%;
+            width: 100%;
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-y: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 10%;
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .overlay a {
+            margin-bottom: 10vh;
+            text-decoration: none;
+            font-size: 25px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+
+
+        #landingpage {
+            background-image: url(img/logo_main.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 100px;
+            width: 150px;
+            margin: auto;
+            margin-bottom: 5vh;
+
+
+        }
+
+
+
+        .overlay a:hover,
+        .overlay a:focus {
+            color: #818181;
+
+        }
+
+        /*Kommentar 3: Ændre luk knappen til en passende knap */
+
+
+        .closebtn {
+            background-image: url(img/close_btn_faxe.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 30px;
+            width: 30px;
+            position: absolute;
+            left: 85vw;
+            top: 5vh;
+
+        }
+
+        .overlay .closebtn {}
+
+        #desktop_nav {
+            display: none;
+        }
+
+
+
+        .headline {
+            margin-top: 100px;
+            color: #19a6a2;
+
+        }
+
+
+        #kontekst {
+            display: flex;
+            flex-direction: column;
+            margin: 10% 0;
+
+
+        }
+
+        #kontekst a {
+            padding: 3%;
+            color: #126a68;
+            background-color: #ddedec;
+            text-decoration: none;
+            font-family: 'limestonelight';
+        }
+
+        #kontekst a:hover {
+            color: #92c7c5;
+        }
+
+
+        .accordion {
+            cursor: pointer;
+            width: 100%;
+
+            /*    position: absolute;*/
+
+
+            display: grid;
+            grid-template-columns: 1fr;
+
+            justify-items: center;
+            padding: 5% 0;
+        }
+
+
+        button {
+            border: none;
+            display: grid;
+            font-size: 1.4rem;
+            color: #126a68;
+
+        }
+
+        button:active {
+            border: none;
+            text-decoration: none;
+        }
+
+        button:focus {
+            outline: 0;
+        }
+
+        button img {
+            width: 25%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+
+
+
+
+        .acccon {
+
+
+            /*
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+*/
+
+        }
+
+
+        /* Styling på accordion panel. */
+        .panel {
+
+            display: none;
+            overflow: hidden;
+            text-align: left;
+
+            /*            width: 100vw;*/
+
+        }
+
+        .panel p {
+            text-align: left;
+        }
+
+
+
+        .cykeltitel,
+        .voksentitel,
+        .fossiljagttitel,
+        .cykel,
+        .voksen,
+        .fossiljagt {
+            background-color: #6bb5b3;
+
+        }
+
+        .cykel,
+        .voksen,
+        .fossiljagt,
+        .bil,
+        .studpen,
+        .kalkrige,
+        .dot,
+        .born,
+        .prisme,
+        .aarskort {
+            padding: 10% 5%;
+            text-align: left;
+        }
+
+
+        .biltitel,
+        .studpentitel,
+        .kalkrigetitel,
+        .bil,
+        .studpen,
+        .kalkrige {
+            background-color: #92c7c5;
+
+        }
+
+        .dottitel,
+        .borntitel,
+        .prismetitel,
+        .dot,
+        .born,
+        .prisme {
+            background-color: #b7dad8;
+
+        }
+
+        .aarskorttitel,
+        .aarskort {
+            background-color: #ddedec;
+        }
+
+        #find_vej,
+        #priser,
+        #guidet_ture {
+            color: #126a68;
+            text-align: left;
+            margin: 7% 7%;
+
+        }
+
+
+        /*        FOOTER*/
+
+        #footer {
+            position: relative;
+            background: #19A6A2;
+            color: white;
+            text-align: center;
+            margin-top: 15vh;
+        }
+
+        #footer #textbox {
+            padding-top: 30px;
+            line-height: 30px;
+            width: 80%;
+            margin: auto;
+        }
+
+
+        #footer #socialbox {
+            padding-bottom: 30px;
+        }
+
+        #socialbox img {
+            height: 30px;
+            margin: 20px
+        }
+
+        .hide {
+            display: none;
+
+        }
+
+
+        #sjaelland {
+            display: none;
+        }
+
+
+
+        @media only screen and (min-width: 600px) {
+
+            #mobiltabs {
+                display: none;
+            }
+
+            #desktoptabs {
+                display: block;
+            }
+
+
+
+            #mobile_nav {
+                display: none;
+
+            }
+
+            #desktop_nav {
+                display: block;
+                position: absolute;
+                right: 7vw;
+                top: 50px;
+                z-index: 1;
+
+
+
+            }
+
+            #desktop_nav a {
+                margin-left: 5vw;
+                text-decoration: none;
+                color: #126a68;
+            }
+
+            #logobox {
+                position: relative;
+                width: 50vw;
+                height: 100px;
+                overflow: hidden;
+                z-index: 1;
+
+
+            }
+
+            /*Kommentar 4: Ændre loget til en passende logo */
+
+
+            #logo_main {
+                background-image: url(img/logo_main_faxe.svg);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                height: 100%;
+                width: 150px;
+                position: absolute;
+                left: 25px;
+                top: 3vh;
+            }
+
+            /*Kommentar 5: Ændre loget til en passende logo */
+
+
+            #logo_sub {
+                background-image: url(img/logo_sub_faxe.svg);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                height: 100%;
+                width: 70px;
+                position: absolute;
+                left: 180px;
+                top: 3vh;
+            }
+
+
+
+
+            #footer {
+                text-align: left;
+                position: relative;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                display: flex;
+
+            }
+
+            #footer #textbox {
+                padding-top: 25px;
+                line-height: 20px;
+                width: 50%;
+                margin: 0;
+
+            }
+
+
+            #footer #socialbox {
+                padding: 20px;
+            }
+
+            #socialbox img {
+                height: 30px;
+                margin: 20px
+            }
+
+
+            #sjaelland {
+                display: block;
+                width: 40vw;
+                position: absolute;
+                top: 7vh;
+            }
+
+            #kontekst {
+                display: flex;
+                flex-direction: row;
+                text-align: right;
+                width: 100vw;
+                height: 35vh;
+                background-color: #ddedec;
+                justify-content: flex-end;
+                align-items: center;
+
+                margin-bottom: 0;
+            }
+
+            #kontekst a {
+                text-align: right;
+            }
+
+            .headline1 {
+                text-align: right;
+                margin-right: 10%;
+            }
+
+
+            #adresse {
+                margin-left: 55%;
+                margin-right: 15%;
+                margin-top: 5%;
+            }
+
+
+            #abncon {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-column-gap: 2vw;
+            }
+
+            #abncon p,
+            .forar,
+            .sommer,
+            .efterar,
+            .saerlige {
+                font-size: 1.2rem;
+            }
+
+            button img {
+                width: 10%;
+            }
+
+            .cykel,
+            .voksen,
+            .fossiljagt,
+            .bil,
+            .studpen,
+            .kalkrige,
+            .dot,
+            .born,
+            .prisme,
+            .aarskort {
+                padding-top: 0;
+            }
+
+
+
+            /*////////////////////////////////////////////////////////////////////////////////TRANSPORT_TAB/////////////////////////////////*/
+
+            /* Style the tab */
+
+            #tab_size {
+                width: 70%;
+                margin: auto;
+                padding-top: 30px;
+            }
+
+            .tab {
+
+                overflow: hidden;
+                border: 0;
+                background-color: #19A6A2;
+
+
+            }
+
+            /* Style the buttons inside the tab */
+
+            #button_position {
+                flex-wrap: wrap;
+                display: flex;
+                justify-content: space-around;
+                margin: 0px 50px;
+            }
+
+            #button_position button {
+                font-family: 'limestoneregular';
+            }
+
+            .tab button {
+
+
+                border-radius: 10px;
+                background-color: inherit;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 14px 16px;
+                margin: 10px;
+                transition: 0.3s;
+                font-size: 17px;
+                color: white;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                ;
+
+            }
+
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+                background-color: rgba(255, 255, 255, 0.26);
+            }
+
+            /* Create an active/current tablink class */
+            .tab button.active {
+                background-color: rgba(255, 255, 255, 0.56);
+            }
+
+
+            /* Style the close button */
+            .topright {
+                float: right;
+                cursor: pointer;
+                font-size: 28px;
+            }
+
+            .topright:hover {
+                color: red;
+            }
+
+            /*////////////////////////////////////////////////////////////////////////////////TRANSPORT_TAB/////////////////////////////////*/
+
+            /* Style the tab content */
+            .tabcontent {
+                display: none;
+                padding: 50px 80px;
+                border: 0;
+                border-top: none;
+                background-color: rgba(25, 166, 162, 0.19);
+                color: #19A6A2;
+                line-height: 30px;
+                font-size: 1.2rem;
+            }
+
+
+            /*////////////////////////////////////////////////////////////////////////////////PRICE_TAB/////////////////////////////////*/
+
+
+            .tabcontent2 {
+                display: none;
+                padding: 50px 40px;
+                border: 0;
+                border-top: none;
+                background-color: rgba(25, 166, 162, 0.19);
+                color: #19A6A2;
+                line-height: 30px;
+                font-size: 1.2rem;
+            }
+
+
+
+            /*////////////////////////////////////////////////////////////////////////////////GUIDE_TAB/////////////////////////////////*/
+
+
+            .tabcontent3 {
+                display: none;
+                padding: 50px 40px;
+                border: 0;
+                border-top: none;
+                background-color: rgba(25, 166, 162, 0.19);
+                color: #19A6A2;
+                line-height: 30px;
+                font-size: 1.2rem;
+            }
+
+
+
+            /*sæt mediaq ved 890px!!!!!!!!!! for tablet*/
+
+
+
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
+            <div class="overlay-content">
+                <a id="landingpage" href="inde.html"></a>
+                <a href="front-page-faxe.html">HJEM</a>
+                <a href="besog_geomuseum.html">BESØG</a>
+                <a href="undervisning_faxe.html">UNDERVISNING</a>
+                <a href="om_faxe.html">OM</a>
+            </div>
+        </div>
+
+        <div id="logobox">
+            <a href="index.html">
+                <div id="logo_main">
+                </div>
+            </a>
+
+            <a href="front-page-faxe.html">
+
+                <div id="logo_sub"></div>
+
+            </a>
+        </div>
+
+
+
+
+
+        <div id="desktop_nav">
+            <nav>
+                <a href="besog_geomuseum.html">BESØG</a>
+                <a href="undervisning_faxe.html">UNDERVISNING</a>
+                <a href="om_faxe.html">OM</a>
+            </nav>
+        </div>
+
+        <span id="mobile_nav" style="font-size:30px;cursor:pointer" onclick="openNav()"></span>
+
+
+    </header>
+
+
+
+
+    <h1 class="headline headline1">Besøg os i dag</h1>
+
+    <nav id="kontekst">
+        <a href="#abning">Åbningstider</a>
+        <a href="#desk_findvej">Find Vej</a>
+        <a href="#desk_priser">Priser</a>
+    </nav>
+
+
+    <img src="img/sjaelland.svg" alt="" id="sjaelland">
+
+    <section id="adresse">
+        <h2>Adresse</h2>
+        <div id="adrdiv"></div>
+    </section>
+
+    <section id="abning">
+
+        <h1 class="headline">Åbningstider</h1>
+        <div id="abncon">
+
+            <div id=forar>
+                <h2>Forårssæson</h2>
+                <p>1. april til 30. juni</p>
+                <div class="forar">
+                </div>
+            </div>
+
+
+            <div id="sommer">
+                <h2>Sommersæson</h2>
+                <p>1. juli til 30. september</p>
+                <div class="sommer"></div>
+            </div>
+
+
+            <div id="efterar">
+                <h2>Efterårssæson</h2>
+                <p>1. oktober til 31. oktober</p>
+                <div class="efterar"></div>
+            </div>
+
+
+            <div id="saerlige">
+                <h2>Særlige Åbningstider</h2>
+                <div class="saerlige"></div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <div id="mobiltabs">
+
+        <section id="find_vej">
+            <h2>Find Vej</h2>
+
+
+            <div class="acccon">
+
+
+
+                <button class="accordion cykeltitel">
+
+                    <img src="img/cykel.svg" alt="">
+
+
+
+                </button>
+                <div class="panel cykel">
+                </div>
+
+
+
+
+                <button class="accordion biltitel">
+
+                    <img src="img/bil.svg" alt="">
+
+
+
+                </button>
+                <div class="panel bil">
+                </div>
+
+
+
+
+
+                <button class="accordion dottitel">
+
+                    <img src="img/dot.svg" alt="">
+
+
+                </button>
+
+                <div class="panel dot">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="priser">
+            <h2>Priser</h2>
+            <div class="acccon">
+
+
+
+                <button class="accordion voksentitel">Voksen</button>
+
+                <div class="panel voksen">
+                </div>
+
+
+
+
+                <button class="accordion studpentitel">Studerende/Pensionister</button>
+                <div class="panel studpen">
+                </div>
+
+
+
+
+
+                <button class="accordion borntitel">Børn 0-17 år</button>
+
+                <div class="panel born">
+                </div>
+
+
+                <button class="accordion aarskorttitel">Årskort</button>
+
+                <div class="panel aarskort">
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <section id="guidet_ture">
+
+            <h2>Guidet Ture</h2>
+            <div class="acccon">
+
+
+
+                <button class="accordion fossiljagttitel">Fossiljagt</button>
+
+                <div class="panel fossiljagt">
+                </div>
+
+
+
+
+                <button class="accordion kalkrigetitel">Vandretur i kalkens rige</button>
+                <div class="panel kalkrige">
+                </div>
+
+
+
+
+
+                <button class="accordion prismetitel">Museum, kalkpark og Prismet</button>
+
+                <div class="panel prisme">
+                </div>
+
+
+
+
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+
+
+
+    <div id="desktoptabs">
+        <!--    !!!!transport-tab!!!!! -->
+        <section id="desk_findvej">
+
+            <h1 class="headline">Find vej</h1>
+
+            <div id="transport_tab">
+                <div id="tab_size">
+                    <div class="tab">
+                        <div id="button_position">
+
+                            <button class="tablinks" onclick="openOptionTransport(event, 'Bike')" id="defaultOpen1"><img src="img/cykel.svg" style="width: 50px;" alt="bike"></button>
+                            <button class="tablinks" onclick="openOptionTransport(event, 'Car')"><img src="img/bil.svg" alt="car" style="width: 50px;"></button>
+                            <button class="tablinks" onclick="openOptionTransport(event, 'Public')"><img src="img/dot.svg" alt="dot" style="width: 50px;"></button>
+                        </div>
+                    </div>
+
+                    <div id="Bike" class="tabcontent">
+
+                        <p class="deskcykel"></p>
+                    </div>
+
+                    <div id="Car" class="tabcontent">
+
+
+                        <p class="deskbil"></p>
+                    </div>
+
+                    <div id="Public" class="tabcontent">
+
+
+                        <p class="deskdot"></p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+
+
+
+
+        <!--    !!!!price-tab!!!!! -->
+        <section id="desk_priser">
+            <h1 class="headline">Priser</h1>
+
+            <div id="transport_tab">
+                <div id="tab_size">
+                    <div class="tab">
+                        <div id="button_position">
+
+                            <button class="tablink2" onclick="openOptionPrices(event, 'Adults')" id="defaultOpen2">Voksne</button>
+                            <button class="tablink2" onclick="openOptionPrices(event, 'Children')">Studerende/pensionister</button>
+                            <button class="tablink2" onclick="openOptionPrices(event, 'Students')">Børn</button><button class="tablink2" onclick="openOptionPrices(event, 'Retired')">Årskort</button>
+                        </div>
+                    </div>
+
+                    <div id="Adults" class="tabcontent2">
+
+
+
+                        <p class="deskvoksen"></p>
+
+                    </div>
+
+                    <div id="Children" class="tabcontent2">
+
+
+                        <p class="deskstudpen"></p>
+                    </div>
+
+                    <div id="Students" class="tabcontent2">
+
+
+                        <p class="deskborn"></p>
+                    </div>
+
+                    <div id="Retired" class="tabcontent2">
+
+
+                        <p class="deskaarskort"></p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!--    !!!!Guide-tab!!!!! -->
+        <section id="desk_guidetture">
+            <h1 class="headline">Guidet ture</h1>
+
+            <div id="transport_tab">
+                <div id="tab_size">
+                    <div class="tab">
+                        <div id="button_position">
+
+                            <button class="tablink3" onclick="openOptionGuide(event, 'Tour1')" id="defaultOpen3">Fossiljagt</button>
+                            <button class="tablink3" onclick="openOptionGuide(event, 'Tour2')">Vandretur i kalkens rige</button>
+                            <button class="tablink3" onclick="openOptionGuide(event, 'Tour3')">Museum, kalkpark og Prismet</button>
+
+                            <!--                        <button class="tablink3" onclick="openOptionGuide(event, 'Tour4')">ANDET</button>-->
+                        </div>
+                    </div>
+
+                    <div id="Tour1" class="tabcontent3">
+
+
+                        <p class="deskfossiljagt"></p>
+                    </div>
+
+                    <div id="Tour2" class="tabcontent3">
+
+
+                        <p class="deskkalkrige"></p>
+                    </div>
+
+                    <div id="Tour3" class="tabcontent3">
+
+
+                        <p class="deskprisme"></p>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <footer>
+
+        <div id="footer">
+
+            <div id="textbox">
+                <p class="phone"></p>
+                <p class="phone_times"></p>
+
+            </div>
+
+            <div id="socialbox">
+
+                <a id="myAnchor" href="mailto:kalklandet@mail.dk">
+                    <img src="img/mail.svg" alt="mailicon">
+                </a>
+
+                <a id="facebookAnchor" href="https://www.facebook.com/stevnsklint/">
+                    <img src="img/facebook.svg" alt="facebookicon">
+                </a>
+
+                <a id="instagramAnchor" href="https://www.instagram.com/oestsjaellandsmuseum/">
+                    <img src="img/instagram.svg" alt="instaicon">
+                </a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <script>
+        let info;
+        let acc = document.getElementsByClassName("accordion");
+        let i;
+
+        document.addEventListener("DOMContentLoaded", hentJson);
+        document.addEventListener("DOMContentLoaded", hentJson2);
+
+
+
+
+
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+            document.getElementById("mobile_nav").classList.add("hide");
+
+            document.querySelector('body').style.overflow = 'hidden'
+
+
+
+
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+            document.getElementById("mobile_nav").classList.remove("hide");
+
+            document.querySelector('body').style.overflow = 'scroll'
+
+        }
+
+
+
+
+
+
+
+
+
+        async function hentJson() {
+            const url = "http://ohnonotanotherwebsite.com/kea/07-cms/kalklandet_redesign/wordpress/wp-json/wp/v2/museums_information/210";
+
+            //ID 210 er museumsinformation for geomuseum faxe
+            //ID 234 Stevnsfort
+            //ID 237 Stevns Klint
+            //wordpress har standard visning på 10 posts per side, det kan du ændre her foroven.
+
+            const myJson = await fetch(url);
+
+            info = await myJson.json();
+
+
+            visInfo();
+            showFooter();
+
+        }
+
+        async function hentJson2() {
+
+            let url = "http://ohnonotanotherwebsite.com/kea/07-cms/kalklandet_redesign/wordpress/wp-json/wp/v2/guidet_tur_geomuseum";
+            let jsonData = await fetch(url);
+            ture = await jsonData.json();
+
+            visTure();
+
+            console.log("getjson2");
+
+        }
+
+        function visTure() {
+
+
+            let geoGuide1 = ture.find(geoGuide1 => geoGuide1.id == 235);
+            let geoGuide2 = ture.find(geoGuide2 => geoGuide2.id == 236);
+            let geoGuide3 = ture.find(geoGuide3 => geoGuide3.id == 238);
+
+
+            console.log("visTure");
+            //            Guidet ture her:
+            document.querySelector(".fossiljagt").innerHTML = geoGuide1.content.rendered;
+            document.querySelector(".kalkrige").innerHTML = geoGuide2.content.rendered;
+            document.querySelector(".prisme").innerHTML = geoGuide3.content.rendered;
+
+
+
+
+
+
+            document.querySelector(".deskfossiljagt").innerHTML = geoGuide1.content.rendered;
+            document.querySelector(".deskkalkrige").innerHTML = geoGuide2.content.rendered;
+            document.querySelector(".deskprisme").innerHTML = geoGuide3.content.rendered;
+        }
+
+
+
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "arotate" class
+                to arrows */
+
+                //                this.lastElementChild.classList.toggle("rotate");
+
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+
+            console.log("readaccordion");
+
+
+        }
+
+
+
+
+
+
+        function visInfo() {
+
+            //            adresse her:
+            document.querySelector("#adrdiv").innerHTML = info.adresse;
+
+
+
+            //            åbningstider her:
+
+            document.querySelector(".forar").innerHTML = `${info.forrssson_bningstid} - ${info.forrssson_lukketid}`;
+            document.querySelector(".sommer").innerHTML = `${info.sommersson_bningstid} - ${info.sommersson_lukketid}`;
+            document.querySelector(".efterar").innerHTML = `${info.efterrssson_bningstid} - ${info.efterrssson_lukketid}`;
+            document.querySelector(".saerlige").innerHTML = `<b>Vinterferie:</b> ${info.vinterferie_bningstid} - ${info.vinterferie_lukketid} <br> <b>Efterårsferie:</b> ${info.efteraarsferie_bningstid} - ${info.efteraarsferie_lukketid}`;
+
+
+            //          transport her:
+            document.querySelector(".cykel").innerHTML = info.cykel;
+            document.querySelector(".bil").innerHTML = info.bil;
+            document.querySelector(".dot").innerHTML = info.dot;
+
+
+
+
+            // priser:
+
+            document.querySelector(".voksen").innerHTML = `${info.voksen}kr`;
+            document.querySelector(".studpen").innerHTML = `<b>Pensionister:</b>${info.retired}kr <br> <b>Studerende:</b>${info.students}kr`;
+            document.querySelector(".born").innerHTML = `${info.children}`;
+            document.querySelector(".aarskort").innerHTML = `${info.yearly_price}kr`;
+
+
+
+
+
+            //         desktop transport her:
+            document.querySelector(".deskcykel").innerHTML = info.cykel;
+            document.querySelector(".deskbil").innerHTML = info.bil;
+            document.querySelector(".deskdot").innerHTML = info.dot;
+
+
+
+
+            //  desktop priser:
+
+            document.querySelector(".deskvoksen").innerHTML = `${info.voksen}kr`;
+            document.querySelector(".deskstudpen").innerHTML = `<b>Pensionister:</b>${info.retired}kr <br> <b>Studerende:</b>${info.students}kr`;
+            document.querySelector(".deskborn").innerHTML = `${info.children}`;
+            document.querySelector(".deskaarskort").innerHTML = `${info.yearly_price}kr`;
+
+
+
+
+
+
+
+        }
+
+
+
+        function showFooter() {
+
+
+
+
+            // footer_stuff
+
+            document.querySelector(".phone").innerHTML = "+45" + " " +
+                info.telefon_nr;
+
+            document.querySelector(".phone_times").innerHTML = info.telefontider;
+
+            document.getElementById("myAnchor").href = "mailto:" + info.mail;
+
+            document.getElementById("facebookAnchor").href = info.facebook;
+
+            document.getElementById("instagramAnchor").href = info.instagram;
+
+
+
+            console.log("showing info");
+
+
+        }
+
+
+
+
+        function openOptionTransport(evt, optionName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(optionName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen1").click();
+
+
+        //PRISER JS
+
+        function openOptionPrices(evt, optionName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent2");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink2");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(optionName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen2").click();
+
+
+
+        //Guide   JS
+
+        function openOptionGuide(evt, optionName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent3");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink3");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(optionName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen3").click();
+
+    </script>
+</body>
+
+</html>
