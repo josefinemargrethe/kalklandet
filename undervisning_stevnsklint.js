@@ -32,15 +32,15 @@ function visTure() {
 
 
     console.log("visTure");
-    //            Guidet ture her:
-    document.querySelector(".ottendeklasse").innerHTML = `<h3>${geoFag1.title.rendered}</h3><p>${geoFag1.content.rendered}</p> <b>Målgruppe:</b>${geoFag1.klassetrin}<br><b>Fag:</b>${geoFag1.fag}<br><b>Max antal deltagere:</b>${geoFag1.antal_deltagere}<br><b>Varighed:</b>${geoFag1.varighed}<br><b>Lokation:</b>${geoFag1.lokation}<br><b>Pris:</b>${geoFag1.pris}<br>`;
+    //            Mobil undervisning her:
+    document.querySelector(".ottendeklasse").innerHTML = `<h3>${geoFag1.title.rendered}</h3><br><p>${geoFag1.content.rendered}</p><br> <b>Målgruppe:</b>${geoFag1.klassetrin}<br><b>Fag:</b>${geoFag1.fag}<br><b>Max antal deltagere:</b>${geoFag1.antal_deltagere}<br><b>Varighed:</b>${geoFag1.varighed}<br><b>Lokation:</b>${geoFag1.lokation}<br><b>Pris:</b>${geoFag1.pris}<br>`;
 
 
 
 
 
 
-    document.querySelector(".stx").innerHTML = `<h3>${geoFag2.title.rendered}</h3><p>${geoFag2.content.rendered}</p> <b>Målgruppe:</b>${geoFag2.klassetrin}<br><b>Fag:</b>${geoFag2.fag}<br><b>Max antal deltagere:</b>${geoFag2.antal_deltagere}<br><b>Varighed:</b>${geoFag2.varighed}<br><b>Lokation:</b>${geoFag2.lokation}<br><b>Pris:</b>${geoFag2.pris}<br>`;
+    document.querySelector(".stx").innerHTML = `<h3>${geoFag2.title.rendered}</h3><br><p>${geoFag2.content.rendered}</p><br> <b>Målgruppe:</b>${geoFag2.klassetrin}<br><b>Fag:</b>${geoFag2.fag}<br><b>Max antal deltagere:</b>${geoFag2.antal_deltagere}<br><b>Varighed:</b>${geoFag2.varighed}<br><b>Lokation:</b>${geoFag2.lokation}<br><b>Pris:</b>${geoFag2.pris}<br>`;
 
 
 
@@ -48,14 +48,14 @@ function visTure() {
 
 
     //            DESKTOP UNDERVISNING    her:
-    document.querySelector(".deskottendeklasse").innerHTML = `<h3>${geoFag1.title.rendered}</h3><p>${geoFag1.content.rendered}</p> <b>Målgruppe:</b>${geoFag1.klassetrin}<br><b>Fag:</b>${geoFag1.fag}<br><b>Max antal deltagere:</b>${geoFag1.antal_deltagere}<br><b>Varighed:</b>${geoFag1.varighed}<br><b>Lokation:</b>${geoFag1.lokation}<br><b>Pris:</b>${geoFag1.pris}<br>`;
+    document.querySelector(".deskottendeklasse").innerHTML = `<h3>${geoFag1.title.rendered}</h3><br><p>${geoFag1.content.rendered}</p><br> <b>Målgruppe:</b>${geoFag1.klassetrin}<br><b>Fag:</b>${geoFag1.fag}<br><b>Max antal deltagere:</b>${geoFag1.antal_deltagere}<br><b>Varighed:</b>${geoFag1.varighed}<br><b>Lokation:</b>${geoFag1.lokation}<br><b>Pris:</b>${geoFag1.pris}<br>`;
 
 
 
 
 
 
-    document.querySelector(".deskstx").innerHTML = `<h3>${geoFag2.title.rendered}</h3><p>${geoFag2.content.rendered}</p> <b>Målgruppe:</b>${geoFag2.klassetrin}<br><b>Fag:</b>${geoFag2.fag}<br><b>Max antal deltagere:</b>${geoFag2.antal_deltagere}<br><b>Varighed:</b>${geoFag2.varighed}<br><b>Lokation:</b>${geoFag2.lokation}<br><b>Pris:</b>${geoFag2.pris}<br>`;
+    document.querySelector(".deskstx").innerHTML = `<h3>${geoFag2.title.rendered}</h3><br><p>${geoFag2.content.rendered}</p><br> <b>Målgruppe:</b>${geoFag2.klassetrin}<br><b>Fag:</b>${geoFag2.fag}<br><b>Max antal deltagere:</b>${geoFag2.antal_deltagere}<br><b>Varighed:</b>${geoFag2.varighed}<br><b>Lokation:</b>${geoFag2.lokation}<br><b>Pris:</b>${geoFag2.pris}<br>`;
 
 
 

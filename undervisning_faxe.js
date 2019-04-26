@@ -47,7 +47,7 @@
 
             document.querySelector(".treklasse").innerHTML = `<h3>${geoFag2.title.rendered}</h3><p>${geoFag2.content.rendered}</p> <b>Målgruppe:</b>${geoFag2.klassetrin}<br><b>Fag:</b>${geoFag2.fag}<br><b>Max antal deltagere:</b>${geoFag2.antal_deltagere}<br><b>Varighed:</b>${geoFag2.varighed}<br><b>Lokation:</b>${geoFag2.lokation}<br><b>Pris:</b>${geoFag2.pris}<br>`;
 
-            document.querySelector(".treklasse").innerHTML += `<h3>${geoFag3.title.rendered}</h3><p>${geoFag3.content.rendered}</p> <b>Målgruppe:</b>${geoFag3.klassetrin}<br><b>Fag:</b>${geoFag2.fag}<br><b>Max antal deltagere:</b>${geoFag2.antal_deltagere}<br><b>Varighed:</b>${geoFag2.varighed}<br><b>Lokation:</b>${geoFag2.lokation}<br><b>Pris:</b>${geoFag2.pris}<br>`;
+            document.querySelector(".treklasse").innerHTML += `<br><br><h3>${geoFag3.title.rendered}</h3><p>${geoFag3.content.rendered}</p> <b>Målgruppe:</b>${geoFag3.klassetrin}<br><b>Fag:</b>${geoFag2.fag}<br><b>Max antal deltagere:</b>${geoFag2.antal_deltagere}<br><b>Varighed:</b>${geoFag2.varighed}<br><b>Lokation:</b>${geoFag2.lokation}<br><b>Pris:</b>${geoFag2.pris}<br>`;
 
 
 
@@ -57,7 +57,7 @@
 
             document.querySelector(".syvklasse").innerHTML = `<h3>${geoFag4.title.rendered}</h3><p>${geoFag4.content.rendered}</p> <b>Målgruppe:</b>${geoFag4.klassetrin}<br><b>Fag:</b>${geoFag4.fag}<br><b>Max antal deltagere:</b>${geoFag4.antal_deltagere}<br><b>Varighed:</b>${geoFag4.varighed}<br><b>Lokation:</b>${geoFag4.lokation}<br><b>Pris:</b>${geoFag4.pris}<br>`;
 
-            document.querySelector(".syvklasse").innerHTML += `<h3>${geoFag5.title.rendered}</h3><p>${geoFag5.content.rendered}</p> <b>Målgruppe:</b>${geoFag5.klassetrin}<br><b>Fag:</b>${geoFag5.fag}<br><b>Max antal deltagere:</b>${geoFag5.antal_deltagere}<br><b>Varighed:</b>${geoFag5.varighed}<br><b>Lokation:</b>${geoFag5.lokation}<br><b>Pris:</b>${geoFag5.pris}<br>`;
+            document.querySelector(".syvklasse").innerHTML += `<br><br><h3>${geoFag5.title.rendered}</h3><p>${geoFag5.content.rendered}</p> <b>Målgruppe:</b>${geoFag5.klassetrin}<br><b>Fag:</b>${geoFag5.fag}<br><b>Max antal deltagere:</b>${geoFag5.antal_deltagere}<br><b>Varighed:</b>${geoFag5.varighed}<br><b>Lokation:</b>${geoFag5.lokation}<br><b>Pris:</b>${geoFag5.pris}<br>`;
 
 
 
@@ -83,7 +83,7 @@
 
             document.querySelector(".desktreklasse").innerHTML = `<h3>${geoFag2.title.rendered}</h3><p>${geoFag2.content.rendered}</p> <b>Målgruppe:</b>${geoFag2.klassetrin}<br><b>Fag:</b>${geoFag2.fag}<br><b>Max antal deltagere:</b>${geoFag2.antal_deltagere}<br><b>Varighed:</b>${geoFag2.varighed}<br><b>Lokation:</b>${geoFag2.lokation}<br><b>Pris:</b>${geoFag2.pris}<br>`;
 
-            document.querySelector(".desktreklasse").innerHTML += `<h3>${geoFag3.title.rendered}</h3><p>${geoFag3.content.rendered}</p> <b>Målgruppe:</b>${geoFag3.klassetrin}<br><b>Fag:</b>${geoFag2.fag}<br><b>Max antal deltagere:</b>${geoFag2.antal_deltagere}<br><b>Varighed:</b>${geoFag2.varighed}<br><b>Lokation:</b>${geoFag2.lokation}<br><b>Pris:</b>${geoFag2.pris}<br>`;
+            document.querySelector(".desktreklasse").innerHTML += `<br><br><h3>${geoFag3.title.rendered}</h3><p>${geoFag3.content.rendered}</p> <b>Målgruppe:</b>${geoFag3.klassetrin}<br><b>Fag:</b>${geoFag2.fag}<br><b>Max antal deltagere:</b>${geoFag2.antal_deltagere}<br><b>Varighed:</b>${geoFag2.varighed}<br><b>Lokation:</b>${geoFag2.lokation}<br><b>Pris:</b>${geoFag2.pris}<br>`;
 
 
 
@@ -93,7 +93,7 @@
 
             document.querySelector(".desksyvklasse").innerHTML = `<h3>${geoFag4.title.rendered}</h3><p>${geoFag4.content.rendered}</p> <b>Målgruppe:</b>${geoFag4.klassetrin}<br><b>Fag:</b>${geoFag4.fag}<br><b>Max antal deltagere:</b>${geoFag4.antal_deltagere}<br><b>Varighed:</b>${geoFag4.varighed}<br><b>Lokation:</b>${geoFag4.lokation}<br><b>Pris:</b>${geoFag4.pris}<br>`;
 
-            document.querySelector(".desksyvklasse").innerHTML += `<h3>${geoFag5.title.rendered}</h3><p>${geoFag5.content.rendered}</p> <b>Målgruppe:</b>${geoFag5.klassetrin}<br><b>Fag:</b>${geoFag5.fag}<br><b>Max antal deltagere:</b>${geoFag5.antal_deltagere}<br><b>Varighed:</b>${geoFag5.varighed}<br><b>Lokation:</b>${geoFag5.lokation}<br><b>Pris:</b>${geoFag5.pris}<br>`;
+            document.querySelector(".desksyvklasse").innerHTML += `<br><br><h3>${geoFag5.title.rendered}</h3><p>${geoFag5.content.rendered}</p> <b>Målgruppe:</b>${geoFag5.klassetrin}<br><b>Fag:</b>${geoFag5.fag}<br><b>Max antal deltagere:</b>${geoFag5.antal_deltagere}<br><b>Varighed:</b>${geoFag5.varighed}<br><b>Lokation:</b>${geoFag5.lokation}<br><b>Pris:</b>${geoFag5.pris}<br>`;
 
 
 
